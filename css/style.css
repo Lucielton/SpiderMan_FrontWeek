@@ -340,6 +340,7 @@ header {
   cursor: pointer;
   margin-left: 16px;
   width: 24px;
+  fill: #959698;
 }
 
 .nav-social svg path,
