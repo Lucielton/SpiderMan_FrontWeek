@@ -339,15 +339,58 @@ header {
 .bx {
   width: 48px;
   height: 48px;
-  background-color: white;
+  background-color: #959698;
   border-radius: 8px;
   display: none;
+  position: relative;
 }
 
 @media screen and (max-width: 960px) {
   .bx {
     display: block;
   }
+}
+
+.bx:after {
+  content: "";
+  position: absolute;
+  top: 30%;
+  left: 15%;
+  width: 70%;
+  height: 10%;
+  border-radius: 20px;
+  background-color: #f4f7fb;
+  -webkit-transition: 1s ease;
+  transition: 1s ease;
+}
+
+.bx:before {
+  content: "";
+  position: absolute;
+  top: 60%;
+  left: 45%;
+  width: 40%;
+  height: 10%;
+  border-radius: 20px;
+  background-color: #f4f7fb;
+  -webkit-transition: 1s ease;
+  transition: 1s ease;
+}
+
+#bx:checked ~ label .bx::after {
+  -webkit-transform: rotate(225deg);
+          transform: rotate(225deg);
+  top: 45%;
+  left: 15%;
+}
+
+#bx:checked ~ label .bx::before {
+  -webkit-transform: rotate(-225deg);
+          transform: rotate(-225deg);
+  width: 70%;
+  height: 10%;
+  top: 45%;
+  left: 15%;
 }
 
 .nav-social {
